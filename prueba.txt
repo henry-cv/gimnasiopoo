@@ -1,0 +1,2 @@
+Probando el repo desde rama hc
+me falta crear un gitignore
