@@ -1,26 +1,30 @@
 package actividades;
 
-//import categorias.Socio;
+import categorias.Socio;
 
 public class Actividad {
-    private int id;
-    private String nombre;
-    private String profesor;
-    private String sala;
 
-    public Actividad(int id, String nombre, String profesor, String sala) {
-        this.id = id;
-        this.nombre = nombre;
-        this.profesor = profesor;
-        this.sala = sala;
-    }
+  private int id;
+  private String nombre;
+  private String profesor;
+  private String sala;
 
-    public String getNombre() {
+  public Actividad(int id, String nombre, String profesor, String sala) {
+    this.id = id;
+    this.nombre = nombre;
+    this.profesor = profesor;
+    this.sala = sala;
+  }
 
-        return nombre;
-       }
+  public String getNombre() {
+    return nombre;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public int getId() {
+    return id;
+  }
+
+  public boolean validarSocio(Socio socio) {
+    return socio.validarActividad(this);
+  }
 }
